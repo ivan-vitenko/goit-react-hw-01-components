@@ -1,0 +1,45 @@
+.container {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item {
+  display: flex;
+  padding: 12px;
+  align-items: center;
+  /* border: 1px solid #000000; */
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px 3px #dddddd;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.status {
+  display: block;
+  margin-right: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.online {
+  composes: status;
+  background-color: red;
+}
+
+.offline {
+  composes: status;
+  background-color: green;
+}
+
+.avatar {
+  border-radius: 3px;
+  margin-right: 12px;
+}
+
+.name {
+  font-size: 24px;
+}
