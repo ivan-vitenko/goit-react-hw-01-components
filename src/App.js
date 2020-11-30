@@ -26,7 +26,7 @@ function App() {
         stats={userData.stats}
       />
 
-      <Statistics statsData={statisticalData} />
+      <Statistics statsData={statisticalData} title="Upload stats" />
 
       <FriendList friends={friends} />
 

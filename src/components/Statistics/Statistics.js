@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import s from "./Statistics.module.css";
 
-const Statistics = ({ statsData }) => {
+const Statistics = ({ statsData, title }) => {
   return (
     <div className="taskContainer">
       <h2 className="taskTitle">
@@ -8,7 +9,7 @@ const Statistics = ({ statsData }) => {
       </h2>
 
       <section className={s.statistics}>
-        <h2 className={s.title}>Upload stats</h2>
+        {title && <h2 className={s.title}>{title}</h2>}
 
         <ul className={s.statList}>
           {statsData.map((item) => (
@@ -25,6 +26,10 @@ const Statistics = ({ statsData }) => {
       </section>
     </div>
   );
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string,
 };
 
 function getRandomColor() {
